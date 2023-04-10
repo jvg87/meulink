@@ -1,0 +1,1 @@
+Projeto de estudos inspirado no curso do Sujeito Programador com objetivo de estudar as funcionalidades do react
