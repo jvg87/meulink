@@ -1,8 +1,17 @@
-import {FiLink} from 'react-icons/fi'
 import './home.css'
+import {FiLink} from 'react-icons/fi'
 import Navbar from '../../components/Navbar'
+import Modal from '../../components/Modal'
+import { useState } from 'react'
 
 export default function Home(){
+    const [link, setLink] = useState('')
+    const [showModal, setShowModal] = useState(false)
+
+    function handleShortLink(){
+        setShowModal(true)
+    }
+
     return (
     <div className="container-home">
         <div className="logo">
@@ -16,12 +25,20 @@ export default function Home(){
                 <FiLink size={24} color='#fff'/>
                 <input 
                     type="text"
-                    placeholder='Cole seu link aqui...'    
+                    placeholder='Cole seu link aqui...'
+                    value={link}    
+                    onChange={(e) => setLink(e.target.value)}
                 />
             </div>
-            <button>Encurtar Link</button>
+            <button onClick={handleShortLink}>Encurtar Link</button>
         </div>
         <Navbar/>
+        
+        {showModal && (
+            <Modal
+                closeModal={ () => setShowModal(false)}
+            />
+        )}
     </div>
     )
 }

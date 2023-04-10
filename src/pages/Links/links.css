@@ -32,7 +32,7 @@
     border: 0;
     width: 100%;
     min-width: 80%;
-    border: 100px;
+    border-radius: 100px;
     height: 46px;
     background-color: rgba(255, 255, 255, 0.15);
     margin-right: 14px;
