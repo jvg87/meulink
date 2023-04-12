@@ -14,8 +14,9 @@
 }
 
 .logo img{
-    height: 180px;
-    margin-bottom: 14px;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 10px;
 }
 
 .logo h1{
